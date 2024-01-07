@@ -7,11 +7,14 @@ export default function Home() {
   const handleAPI = async () => {
     try {
       const response = await axios.get('https://api.quotable.io/quotes/random');
+      console.log(response.data);
       return response.data;
     } catch (error) {
       console.log(error);
     }
   };
+
+  // handleAPI();
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
