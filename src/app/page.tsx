@@ -18,15 +18,15 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-blue-600/20">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
+    <main className="flex min-h-screen text-center flex-col items-center justify-between p-32 bg-blue-600/20">
+      <div className="border border-[#ffffff] p-20 z-10 max-w-5xl w-full items-center justify-center font-mono text-xl flex text-center">
         <h1>
           {quote}
         </h1>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <button className="py-30" onClick={handleAPI}>Make API Call</button>
+      <div className="flex justify-center mb-44 text-center items-center lg:max-w-5xl lg:w-full lg:text-left">
+        <button className="" onClick={handleAPI}>Get other quote</button>
       </div>
     </main>
   )
