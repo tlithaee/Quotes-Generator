@@ -2,12 +2,8 @@
 
 import axios from 'axios';
 import { useState } from 'react';
-import { Inter } from 'next/font/google'
-import Layout from './Components/layout';
 
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+export function Home() {
   const [quote, setQuote] = useState('');
 
   const handleAPI = async () => {
@@ -22,18 +18,16 @@ export default function Home() {
   };
 
   return (
-    <Layout>
       <main className="flex min-h-screen text-center flex-col items-center justify-between p-32 bg-[url('/paint.jpg')] bg-cover bg-no-repeat text-white">
         <div className="bg-[#b7cedc73] rounded-lg p-24 z-10 max-w-5xl w-full items-center justify-center font-mono text-xl flex text-center backdrop-blur-md">
-          <h1 className={inter.className}>
+          <h1>
             {quote}
           </h1>
         </div>
 
         <div className="flex justify-center mb-44 text-center items-center lg:max-w-5xl lg:w-full lg:text-left text-lg ">
-          <button className={inter.className} onClick={handleAPI}>Get other quote</button>
+          <button onClick={handleAPI}>Get other quote</button>
         </div>
       </main>
-    </Layout>
   )
 }
